@@ -1,0 +1,78 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 usercontainer" *ngFor="let user of userList">
+        <div class="row">
+          <div class="col-md-4 heading">
+              Name:
+          </div>
+          <div class="col-md-8 detail">
+              {{user.name}}
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 heading">
+                E-mail:
+            </div>
+            <div class="col-md-8 detail">
+                {{user.email}}
+            </div>
+        </div>
+          <div class="row">
+              <div class="col-md-4 heading">
+                  Address:
+              </div>
+              <div class="col-md-8 detail">
+                  {{user.address.suite}}, {{user.address.street}},{{user.address.city}}
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4 heading">
+                  
+              </div>
+              <div class="col-md-8 detail">
+                  Zip {{user.address.zipcode}}
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4 heading">
+                  Phone No: 
+              </div>
+              <div class="col-md-8 detail">
+                  {{user.phone}}
+              </div>
+          </div>
+          <legend>Professional Details</legend>
+          <div class="row">
+              <div class="col-md-4 heading">
+                  Company: 
+              </div>
+              <div class="col-md-8 detail">
+                  {{user.company.name}}
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4 heading">
+                  Catch: 
+              </div>
+              <div class="col-md-8 detail">
+                  {{user.company.catchPhrase}}
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4 heading">
+                 BS: 
+              </div>
+              <div class="col-md-8 detail">
+                  {{user.company.bs}}
+              </div>
+          </div>
+          <div class="row buttonRow">
+              <button class="btn btn-primary" (click)="getToDos(user.id)">View TODO</button>
+          </div>
+    </div>
+  </div>
+</div>
+
+
+
